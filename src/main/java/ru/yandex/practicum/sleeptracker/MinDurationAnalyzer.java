@@ -1,6 +1,5 @@
 package ru.yandex.practicum.sleeptracker;
 
-import java.util.Comparator;
 import java.util.List;
 
 public class MinDurationAnalyzer implements SleepAnalyzer {

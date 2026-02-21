@@ -1,7 +1,5 @@
 package ru.yandex.practicum.sleeptracker;
 
-import ru.yandex.practicum.sleeptracker.SleepingSession;
-
 import java.util.List;
 
 public class TotalSessionsAnalyzer implements SleepAnalyzer {
