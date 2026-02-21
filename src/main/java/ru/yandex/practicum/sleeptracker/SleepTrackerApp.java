@@ -67,7 +67,7 @@ public class SleepTrackerApp {
         return new SleepingSession(start, end, quality);
     }
 
-    private static void printResult(SleepAnalysisResult result){
+    private static void printResult(SleepAnalysisResult result) {
         System.out.println(result.getDescription() + ": " + result.getValue());
     }
 }

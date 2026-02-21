@@ -29,7 +29,7 @@ class InsomniaNightsAnalyzerTest {
     void insomniaIfDaySleep() {
         List<SleepingSession> sessions = List.of(
                 sessionDay(1),
-                session(2,23,7)
+                session(2, 23, 7)
         );
 
         InsomniaNightsAnalyzer analyzer = new InsomniaNightsAnalyzer();
