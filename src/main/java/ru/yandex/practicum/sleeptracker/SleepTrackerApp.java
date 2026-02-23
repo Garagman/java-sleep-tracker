@@ -13,7 +13,8 @@ public class SleepTrackerApp {
 
     private static final String FILE_NAME = "sleep_log.txt";
 
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd.MM.yy HH:mm");
+    private static final String DATE_TIME_PATTERN = "dd.MM.yy HH:mm";
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_PATTERN);
 
     private static final List<SleepAnalyzer> ANALYZERS = List.of(
             new TotalSessionsAnalyzer(),
@@ -46,7 +47,7 @@ public class SleepTrackerApp {
                 .getResourceAsStream(fileName);
 
         if (inputStream == null) {
-            throw new IOException("Файл не найден: " + fileName);
+            throw new IOException(String.format("Файл не найден: %s", fileName));
         }
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
@@ -68,6 +69,6 @@ public class SleepTrackerApp {
     }
 
     private static void printResult(SleepAnalysisResult result) {
-        System.out.println(result.getDescription() + ": " + result.getValue());
+        System.out.println(String.format("%s: %s",result.getDescription(), result.getValue()));
     }
 }
